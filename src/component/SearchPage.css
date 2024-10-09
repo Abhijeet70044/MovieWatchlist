@@ -1,0 +1,18 @@
+/* src/components/SearchPage.css */
+.search-page {
+    padding: 20px;
+  }
+  
+  .page-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #e63946;
+    margin-bottom: 20px;
+  }
+  
+  .movie-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  

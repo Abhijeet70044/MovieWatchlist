@@ -1,0 +1,11 @@
+/* src/components/Watchlist.css */
+.watchlist-page {
+    padding: 20px;
+  }
+  
+  .watchlist-page h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #e63946;
+  }
+  
