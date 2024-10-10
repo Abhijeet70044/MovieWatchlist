@@ -1,32 +1,57 @@
-/* src/components/SearchPage.css */
 .search-page {
-    padding: 20px;
-  }
-  
-  .page-title {
-    font-size: 28px;
-    font-weight: bold;
-    color: #e63946;
-    margin-bottom: 20px;
-  }
-  
-  .movie-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
+  display: flex;
+  height: 100vh;
+  padding: 20px;
+}
 
-  .add-all-button {
-    margin: 10px 0;
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    }
-  
-  .add-all-button:hover {
-    background-color: #0056b3;
-    }
-  
+/* Sidebar for Watch List */
+.watchlist-sidebar {
+  width: 250px;
+  padding: 20px;
+  background-color: #a1bfdd;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+}
+
+.sidebar-movie-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 0 20px;
+  overflow-y: auto;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #e63946;
+  margin-bottom: 20px;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.add-all-button {
+  margin: 10px 0;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-all-button:hover {
+  background-color: #0056b3;
+}
+
+.add-all-button:focus {
+  outline: none;
+}
