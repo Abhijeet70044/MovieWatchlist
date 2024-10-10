@@ -4,7 +4,6 @@
   padding: 20px;
 }
 
-/* Sidebar for Watch List */
 .watchlist-sidebar {
   width: 250px;
   padding: 20px;
@@ -13,10 +12,9 @@
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Space between to push the button to the bottom */
+  justify-content: space-between; 
 }
 
-/* Grid of movies in the sidebar */
 .sidebar-movie-grid {
   display: flex;
   flex-direction: column;
@@ -42,7 +40,6 @@
   gap: 20px;
 }
 
-/* Logout Button */
 .logout-button {
   padding: 10px;
   background-color: #e63946;
@@ -51,7 +48,7 @@
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
-  margin-bottom: 10px; /* This ensures it aligns at the bottom of the sidebar */
+  margin-bottom: 10px; 
 }
 
 .logout-button:hover {

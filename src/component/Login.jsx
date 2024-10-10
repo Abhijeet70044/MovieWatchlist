@@ -11,7 +11,7 @@ const Login = () => {
 
   const handleCreateAccount = () => {
     if (validateEmail(email)) {
-      createUser(email); // Create a new user
+      createUser(email); 
       setErrorMessage("Account created successfully! You can now log in.");
     } else {
       setErrorMessage("Please enter a valid email.");
@@ -22,7 +22,7 @@ const Login = () => {
     if (validateEmail(email)) {
       const isSuccess = loginUser(email);
       if (isSuccess) {
-        navigate("/search"); // Redirect to search page on successful login
+        navigate("/search"); 
       } else {
         setErrorMessage("User does not exist. Please create an account.");
       }

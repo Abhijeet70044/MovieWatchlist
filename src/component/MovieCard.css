@@ -1,4 +1,3 @@
-/* src/components/MovieCard.css */
 .movie-card {
   position: relative;
   padding: 10px;
@@ -34,9 +33,11 @@
     font-size: 36px;
     color: #92fe04;
     }
+  
   .add-all-button:hover {
     color: #0056b3;
     }
+
   .add-all-button:focus {
     outline: none;
     }

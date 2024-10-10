@@ -1,6 +1,5 @@
-// src/components/SearchBar.js
 import React, { useState } from "react";
-import "./SearchBar.css"; // Import CSS for SearchBar
+import "./SearchBar.css";
 
 const SearchBar = ({ onSearch }) => {
   const [query, setQuery] = useState("");

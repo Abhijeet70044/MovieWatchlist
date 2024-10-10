@@ -5,7 +5,7 @@ import LoginComponent from "./component/Login";
 import SearchPage from "./component/SearchPage";
 import Watchlist from "./component/Watchlist";
 import {AuthProvider} from "./context/Auth";
-import "./App.css"; // Link the main app CSS
+import "./App.css"; 
 
 function App() {
   return (

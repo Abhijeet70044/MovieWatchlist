@@ -5,7 +5,6 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    // Load currently logged-in user from localStorage
     const savedUser = localStorage.getItem("currentUser");
     if (savedUser) {
       setUser(JSON.parse(savedUser));
@@ -21,19 +20,19 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  // Login user if the user is found in localStorage
+ 
   const loginUser = (email) => {
     const users = JSON.parse(localStorage.getItem("users")) || {};
     if (users[email]) {
       setUser(users[email]);
       localStorage.setItem("currentUser", JSON.stringify(users[email]));
-      return true; // Successfully logged in
+      return true; 
     } else {
-      return false; // User not found
+      return false; 
     }
   };
 
-  // Logout user and clear current user session
+
   const logoutUser = () => {
     setUser(null);
     localStorage.removeItem("currentUser");
@@ -45,7 +44,7 @@ export const AuthProvider = ({ children }) => {
       const users = JSON.parse(localStorage.getItem("users")) || {};
       users[user.email].watchlist = watchlist;
       localStorage.setItem("users", JSON.stringify(users));
-      setUser({ ...user, watchlist }); // Update local state as well
+      setUser({ ...user, watchlist }); 
     }
   };
 

@@ -1,4 +1,4 @@
-const API_KEY = "8474868d"; // Replace with your actual OMDb API key
+const API_KEY = "8474868d"; 
 
 const BASE_URL = `http://www.omdbapi.com/?apikey=${API_KEY}`;
 
@@ -24,7 +24,7 @@ const getMovieDetails = async (imdbID) => {
   }
 };
 
-// Assign to an object before exporting
+
 const omdbApi = {
   searchMovies,
   getMovieDetails,

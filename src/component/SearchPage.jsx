@@ -9,10 +9,9 @@ import "./SearchPage.css";
 const SearchPage = () => {
   const { user, saveWatchlist, logoutUser } = useContext(AuthContext);
   const [movies, setMovies] = useState([]);
-  const [watchList, setWatchList] = useState(user?.watchlist || []); // Load user's watchlist
+  const [watchList, setWatchList] = useState(user?.watchlist || []); 
   const navigate = useNavigate();
 
-  // Load watchlist from user when component mounts
   useEffect(() => {
     if (user?.watchlist) {
       setWatchList(user.watchlist);
@@ -28,14 +27,14 @@ const SearchPage = () => {
     if (!watchList.find((m) => m.imdbID === movie.imdbID)) {
       const updatedList = [...watchList, movie];
       setWatchList(updatedList);
-      saveWatchlist(updatedList); // Save the updated watchlist
+      saveWatchlist(updatedList); 
     }
   };
 
   const removeFromWatchList = (movie) => {
     const updatedList = watchList.filter((m) => m.imdbID !== movie.imdbID);
     setWatchList(updatedList);
-    saveWatchlist(updatedList); // Save the updated watchlist
+    saveWatchlist(updatedList); 
   };
 
   const handleLogout = () => {
@@ -62,7 +61,7 @@ const SearchPage = () => {
           <p>No movies in the watch list</p>
         )}
 
-        {/* Logout button */}
+        {}
         <button className="logout-button" onClick={handleLogout}>
           Logout
         </button>
