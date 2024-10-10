@@ -1,10 +1,10 @@
 /* src/components/MovieCard.css */
 .movie-card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  position: relative;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  text-align: center;
   }
   
   .movie-poster {
@@ -23,4 +23,21 @@
   .movie-year {
     color: #555;
   }
+
+  .add-all-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #007bff;
+    }
+  .add-all-button:hover {
+    color: #0056b3;
+    }
+  .add-all-button:focus {
+    outline: none;
+    }
   
