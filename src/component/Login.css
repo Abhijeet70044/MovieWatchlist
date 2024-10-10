@@ -1,5 +1,4 @@
 /* src/components/LoginComponent.css */
-
 .error-message {
   color: red;
   font-size: 0.9em;
@@ -7,53 +6,86 @@
 }
 
 .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f5f5f5;
-  }
-  
-  h2 {
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .login-box {
-    padding: 20px;
-    max-width: 400px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .login-box h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .email-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }
-  
-  .login-button {
-    width: 100%;
-    background-color: #e63946;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .login-button:hover {
-    background-color: #d32f2f;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #edd4d4;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-box {
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-box h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: red;
+ /* background-color: red;  Set background to red */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.email-input {
+  width: 94%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.logout-button {
+  padding: 10px;
+  background-color: #e63946;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f;
+}
+
+
+.toggle-option {
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #333;
+}
+
+.toggle-option span {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.toggle-option span:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  width: 100%;
+  background-color: #007bff; /* Set background to blue */
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.login-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

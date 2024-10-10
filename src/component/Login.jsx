@@ -1,27 +1,36 @@
-// src/components/LoginComponent.js
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/Auth";
-import "./Login.css"; // Import the CSS for this component
+import "./Login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
-  const [errorMessage, setErrorMessage] = useState(""); // State to handle error message
-  const { loginUser } = useContext(AuthContext);
+  const [errorMessage, setErrorMessage] = useState("");
+  const { loginUser, createUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  const handleLogin = () => {
-    if (!email) {
-      setErrorMessage("Email is required");
-    } else if (!validateEmail(email)) {
-      setErrorMessage("Please enter a valid email address");
+  const handleCreateAccount = () => {
+    if (validateEmail(email)) {
+      createUser(email); // Create a new user
+      setErrorMessage("Account created successfully! You can now log in.");
     } else {
-      loginUser({ email });
-      navigate("/search");
+      setErrorMessage("Please enter a valid email.");
     }
   };
 
-  // Function to validate email format using regex
+  const handleLogin = () => {
+    if (validateEmail(email)) {
+      const isSuccess = loginUser(email);
+      if (isSuccess) {
+        navigate("/search"); // Redirect to search page on successful login
+      } else {
+        setErrorMessage("User does not exist. Please create an account.");
+      }
+    } else {
+      setErrorMessage("Please enter a valid email.");
+    }
+  };
+
   const validateEmail = (email) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
@@ -37,13 +46,16 @@ const Login = () => {
           value={email}
           onChange={(e) => {
             setEmail(e.target.value);
-            setErrorMessage(""); // Clear error message when typing
+            setErrorMessage("");
           }}
           className="email-input"
         />
         {errorMessage && <p className="error-message">{errorMessage}</p>}
         <button onClick={handleLogin} className="login-button">
-          Continue
+          Login
+        </button>
+        <button onClick={handleCreateAccount} className="login-button">
+          Create Account
         </button>
       </div>
     </div>
