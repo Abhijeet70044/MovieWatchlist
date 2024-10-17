@@ -1,5 +1,5 @@
 import React from "react";
-import "./MovieCard.css"; // Import CSS for MovieCard
+import "./MovieCard.css"; 
 const MovieCard = ({ movie, isInWatchList, onAddToWatchList, onRemoveFromWatchList }) => {
   return (
     <div className="movie-card">
